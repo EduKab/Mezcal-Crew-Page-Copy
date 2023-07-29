@@ -12,24 +12,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </head>
-<body>
+<body id="body">
+    <!-- Navbar-->
     <header id="header">
         <nav class="navbar navbar-expand-lg block" style="height: 100px;">
             <div class="col">
                 <div class="row">
+                    <!-- Logo -->
                     <div class="col-7">
                         <a class="navbar-brand" style="margin-left: 30px;"><img src="assets/images/mezcal-logo.png" height="100" width="200"></a>
                     </div>
                     <div class="col-5 d-flex align-items-center justify-content-end">
                         <ul class="navbar-nav" style="margin-right: 50px;">
                             <li class="nav-item active" style="margin: 10px;">
-                              <a class="nav-link text-white font-navbar" style="font-size: 14px;" href="#inicio">INICIO</a>
+                              <a class="nav-link text-white font-oswald" style="font-size: 14px;" href="#inicio">INICIO</a>
                             </li>
                             <li class="nav-item" style="margin: 10px;">
-                              <a class="nav-link text-white font-navbar" style="font-size: 14px;" href="#servicios">TIENDA</a>
+                              <a class="nav-link text-white font-oswald" style="font-size: 14px;" href="#servicios">TIENDA</a>
                             </li>
                             <li class="nav-item" style="margin: 10px;">
-                              <a class="nav-link text-white font-navbar" style="font-size: 14px;" href="#nosotros">WALLPAPER GRATIS</a>
+                              <a class="nav-link text-white font-oswald" style="font-size: 14px;" href="#nosotros">WALLPAPER GRATIS</a>
                             </li>
                             <li class="nav-item d-flex align-items-center" style="margin: 10px;">
                                 <div class="vertical-line text-white"></div>
@@ -52,7 +54,7 @@
                 <div class="col-12 video-container">
                     <video src="assets/video/mezcal-video.mp4" autoplay="true" muted="true" loop="true"></video>
                     <div class="content">
-                        <span class="text-white font-navbar" style="font-size: 50px;">TIENDA OFICIAL ONLINE</span>
+                        <span class="text-white font-oswald" style="font-size: 50px;">TIENDA OFICIAL ONLINE</span>
                         <br>
                         <button id="btnSubscribe" type="button" class="btn text-white"><b>SUSCRIBIRSE</b></button>
                     </div>
@@ -61,7 +63,89 @@
         </div>
     </section>
     <section>
-        <div style="height: 500px;"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                    <h1 class="font-oswald text-gray">CLASICOS</h1>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center justify-content-center">
+                <hr style="color: gray; width: 50px; border: solid 1px gray; margin-top: 3vh;"/>
+            </div>
+            <div class="row d-flex align-items-center justify-content-center mt-4">
+                    <div class="col-3 card-collection font-oswald" style="background-image: url('assets/images/fondos/fondo-playeras.png');">
+                        <h1 class="text-white">PLAYERAS</h1>
+                    </div>
+                <div class="col-3 card-collection font-oswald" style="background-image: url('assets/images/fondos/fondo-accesorios.png');">
+                    <h1 class="text-white">ACCESORIOS</h1>
+                </div>
+                <div class="col-3 card-collection font-oswald" style="background-image: url('assets/images/fondos/fondo-colecciones.png');">
+                    <h1 class="text-white">COLECCIONES</h1>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center justify-content-center mt-4">
+                <div class="col-3 card-collection font-oswald" style="background-image: url('assets/images/fondos/fondo-lanyards.png');">
+                    <h1 class="text-white">LANYARDS</h1>
+                </div>
+            <div class="col-3 card-collection font-oswald" style="background-image: url('assets/images/fondos/fondo-damas.png');">
+                <h1 class="text-white">DAMAS</h1>
+            </div>
+            <div class="col-3 card-collection font-oswald" style="background-image: url('assets/images/fondos/fondo-gorras.png');">
+                <h1 class="text-white">GORRAS</h1>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container" style="margin-top: 15vh;">
+            <div class="row">
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                    <h1 class="font-oswald text-gray">OTROS</h1>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center justify-content-center">
+                <hr style="color: gray; width: 50px; border: solid 1px gray; margin-top: 3vh;"/>
+            </div>
+            <div class="row d-flex align-items-center justify-content-center mt-4">
+                    <div class="col-3 card-collection font-oswald" style="background-image: url('assets/images/fondos/fondo-hoodies.png');">
+                        <h1 class="text-white">HOODIES</h1>
+                    </div>
+                <div class="col-3 card-collection font-oswald" style="background-image: url('assets/images/fondos/fondo-kids.png');">
+                    <h1 class="text-white">KIDS</h1>
+                </div>
+                <div class="col-3 card-collection font-oswald" style="background-image: url('assets/images/fondos/fondo-colaboraciones.png');">
+                    <h2 class="text-white">COLABORACIONES</h1>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center justify-content-center mt-4">
+                <div class="col-3 card-collection font-oswald" style="background-image: url('assets/images/fondos/fondo-stickers.png');">
+                    <h1 class="text-white">STICKERS</h1>
+                </div>
+            <div class="col-3 card-collection font-oswald" style="background-image: url('assets/images/fondos/fondo-ofertas.png');">
+                <h1 class="text-white">OFERTAS</h1>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container" style="margin-top: 15vh; margin-bottom: 10vh;">
+            <div class="row">
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                    <h1 class="font-oswald text-white">Suscribirse</h1>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                    <span class="text-gray">Suscríbete aquí para recibir noticias sobre promociones, ofertas y nuevos productos.</span>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center justify-content-center mt-3">
+                <div class="col-4">
+                    <input role="textbox" id="inputRegister" class="text-white"></input>
+                </div>
+                <div class="col-2">
+                    <button id="btnRegister" type="button" class="btn text-white"><b>REGISTRARSE</b></button>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 </html>
