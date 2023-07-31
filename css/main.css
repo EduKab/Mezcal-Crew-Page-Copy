@@ -19,6 +19,7 @@ html, body{
     width: 100%;
     background-color: black;
     opacity: 0.8;
+    z-index: 1;
 }
 
 #footer{
@@ -27,11 +28,13 @@ html, body{
 
 #btnSubscribe{
     background-color: #575757;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    padding-left: 4vh;
-    padding-right: 4vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    padding-left: 6vh;
+    padding-right: 6vh;
+    border-radius: 5px;
     font-size: 13px;
+    text-decoration: none;
 }
 
 #btnRegister{
@@ -45,10 +48,17 @@ html, body{
 
 #inputRegister{
     background-color: #161616;
+    color: black;
     border: solid 1px white;
     border-radius: 4px;
     height: 50px; 
     width: 100%;
+}
+
+#inputSearch{
+    flex: 1;
+    border: none;
+    outline: none;
 }
 
 .content {
@@ -73,6 +83,11 @@ html, body{
 .icon{
     font-size: 25px;
     margin: 10px;
+}
+
+.icon-search{
+    margin: 10px;
+    font-size: 15px;
 }
 
 .card-collection{

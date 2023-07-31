@@ -15,34 +15,34 @@
 <body id="body">
     <!-- Navbar-->
     <header id="header">
-        <nav class="navbar navbar-expand-lg block" style="height: 100px;">
+        <nav class="navbar navbar-expand-lg" style="height: 100px;">
             <div class="col">
                 <div class="row">
                     <!-- Logo -->
                     <div class="col-7">
-                        <a class="navbar-brand" style="margin-left: 30px;"><img src="assets/images/mezcal-logo.png" height="100" width="200"></a>
+                        <a href="" class="navbar-brand" style="margin-left: 30px;"><img src="assets/images/mezcal-logo.png" height="100" width="200"></a>
                     </div>
-                    <div class="col-5 d-flex align-items-center justify-content-end">
-                        <ul class="navbar-nav" style="margin-right: 50px;">
+                    <div id="divSearch" class="col-5 d-flex align-items-center justify-content-center">
+                        <ul class="navbar-nav">
                             <li class="nav-item active" style="margin: 10px;">
-                              <a class="nav-link text-white font-oswald" style="font-size: 14px;" href="#inicio">INICIO</a>
+                              <a class="nav-link text-white font-oswald" style="font-size: 14px;" href="">INICIO</a>
                             </li>
                             <li class="nav-item" style="margin: 10px;">
-                              <a class="nav-link text-white font-oswald" style="font-size: 14px;" href="#servicios">TIENDA</a>
+                              <a class="nav-link text-white font-oswald" style="font-size: 14px;" href="tienda">TIENDA</a>
                             </li>
                             <li class="nav-item" style="margin: 10px;">
-                              <a class="nav-link text-white font-oswald" style="font-size: 14px;" href="#nosotros">WALLPAPER GRATIS</a>
+                              <a class="nav-link text-white font-oswald" style="font-size: 14px;" href="wallpaper-gratis">WALLPAPER GRATIS</a>
                             </li>
                             <li class="nav-item d-flex align-items-center" style="margin: 10px;">
                                 <div class="vertical-line text-white"></div>
                             </li>
                             <li class="nav-item d-flex align-items-center"  style="margin: 10px;">
-                                <i class="fas fa-magnifying-glass text-white" style="font-size: 17px;"></i>
+                                <button class="nav-link text-white" onclick="searchBar()"><i class="fas fa-magnifying-glass text-white" style="font-size: 17px;"></i></button>
                             </li>
                             <li class="nav-item d-flex align-items-center"  style="margin: 10px;">
-                                <i class="fas fa-cart-shopping text-white" style="font-size: 17px;"></i>
+                                <a href="tienda/ols/cart" class="nav-link text-white"><i class="fas fa-cart-shopping text-white" style="font-size: 17px;"></i></a>
                             </li> 
-                          </ul>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                     <div class="content">
                         <span class="text-white font-oswald" style="font-size: 50px;">TIENDA OFICIAL ONLINE</span>
                         <br>
-                        <button id="btnSubscribe" type="button" class="btn text-white"><b>SUSCRIBIRSE</b></button>
+                        <a href="#suscribe" id="btnSubscribe" onclick="scrollToSection()" class="text-white"><b>SUSCRIBIRSE</b></a>
                     </div>
                 </div>
             </div>
@@ -125,7 +125,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="suscribe">
         <div class="container" style="margin-top: 15vh; margin-bottom: 7vh;">
             <div class="row">
                 <div class="col-12 d-flex align-items-center justify-content-center">
@@ -184,4 +184,45 @@
         </div>
     </footer>
 </body>
+<script>
+    function scrollToSection() {
+      // Desplazamiento hacia arriba después de 500 milisegundos (ajústalo según tus necesidades)
+      setTimeout(() => {
+        window.scrollBy(0, -50); // Desplazamiento hacia arriba 100px
+      }, 700);
+    }
+</script>
+<script>
+    function searchBar() {
+        var div = document.getElementById("divSearch");
+        div.innerHTML = '<div class="d-flex align-items-center" style="background-color: white; height: 40%; width: 90%;">' +
+                        '    <button class="nav-link"><i class="fas fa-magnifying-glass icon-search"></i></button>' +
+                        '    <input autofocus role="text" id="inputSearch" placeholder="Buscar Productos"></input>' +
+                        '    <button class="nav-link" onclick="optionsNavbar()"><i class="fas fa-close icon-search"></i></button>' +
+                        '</div>';
+    }
+    function optionsNavbar(){
+        var div = document.getElementById("divSearch");
+        div.innerHTML = '<ul class="navbar-nav">' +
+                        '   <li class="nav-item active" style="margin: 10px;">' +
+                        '      <a class="nav-link text-white font-oswald" style="font-size: 14px;" href="#inicio">INICIO</a>' +
+                        '    </li>' +
+                        '    <li class="nav-item" style="margin: 10px;">' +
+                        '      <a class="nav-link text-white font-oswald" style="font-size: 14px;" href="#tienda">TIENDA</a>' +
+                        '    </li>' +
+                        '    <li class="nav-item" style="margin: 10px;">' +
+                        '      <a class="nav-link text-white font-oswald" style="font-size: 14px;" href="#wallpaper-gratis">WALLPAPER GRATIS</a>' +
+                        '    </li>' +
+                        '    <li class="nav-item d-flex align-items-center" style="margin: 10px;">' +
+                        '        <div class="vertical-line text-white"></div>' +
+                        '    </li>' +
+                        '    <li class="nav-item d-flex align-items-center"  style="margin: 10px;">' +
+                        '        <button class="nav-link text-white" onclick="searchBar()"><i class="fas fa-magnifying-glass text-white" style="font-size: 17px;"></i></button>' +
+                        '    </li>' +
+                        '    <li class="nav-item d-flex align-items-center"  style="margin: 10px;">' +
+                        '        <a href="tienda/ols/cart" class="nav-link text-white"><i class="fas fa-cart-shopping text-white" style="font-size: 17px;"></i></a>' +
+                        '    </li>' +
+                        '</ul>';
+    }
+</script>
 </html>
