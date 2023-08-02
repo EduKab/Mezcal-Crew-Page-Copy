@@ -53,12 +53,57 @@ html, body{
     border-radius: 4px;
     height: 50px; 
     width: 100%;
+    padding: 10px;
 }
 
 #inputSearch{
     flex: 1;
     border: none;
     outline: none;
+}
+
+.card-collection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-position: center;
+    background-size: 95vh 55vw;
+    filter: brightness(70%);
+    transition-property: background-size;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.card-collection > h1{
+    transition-property: font-size;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.card-collection > h2{
+    transition-property: font-size;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.card-collection:hover{
+    background-size: 100vh 60vw;
+    filter: brightness(100%);
+}
+
+.card-collection:hover > h1{
+    font-size: 38px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-collection:hover > h2{
+    font-size: 33px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-link{
+    text-decoration: none;
 }
 
 .content {
@@ -88,16 +133,6 @@ html, body{
 .icon-search{
     margin: 10px;
     font-size: 15px;
-}
-
-.card-collection{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-    margin: 2%;
-    background-position: center;
-    background-size: cover;
 }
 
 .text-white{
