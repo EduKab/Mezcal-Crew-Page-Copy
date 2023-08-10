@@ -1,3 +1,24 @@
+/* Carousel */
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper-slide-active{
+    filter: brightness(100%) !important;
+}
+
+.swiper-button-next{
+    background-color: #161616;
+}
+
+.lowBrightness{
+    transition: filter 0.3s ease;
+    filter: brightness(30%);
+}
+
+/* ----- */
+
 h1{
     color: #7A706E;
 }
@@ -12,6 +33,13 @@ html, body{
     padding: 0;
     overflow-x: hidden;
     background-color: #161616;
+}
+
+#bodyWallpaper{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #545454;
 }
 
 #header{
@@ -133,6 +161,11 @@ html, body{
 .icon-search{
     margin: 10px;
     font-size: 15px;
+}
+
+.white-line{
+    color: white;
+    border: solid 1px white; 
 }
 
 .text-white{
