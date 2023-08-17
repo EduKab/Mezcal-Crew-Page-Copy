@@ -15,7 +15,24 @@
 .lowBrightness{
     transition: filter 0.3s ease;
     filter: brightness(30%);
+    filter: contrast(30%)
 }
+
+.swiper-thumbs {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .swiper-thumbs .swiper-slide-thumb {
+    width: 80px;
+    height: 50px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
+
+  .swiper-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+  }
 
 /* ----- */
 
@@ -39,7 +56,7 @@ html, body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #545454;
+    background-color: #585858;
 }
 
 #header{
@@ -88,6 +105,14 @@ html, body{
     flex: 1;
     border: none;
     outline: none;
+}
+
+.btn-download{
+    background-color: #4C4C4C;
+    width: 50%;
+    height: 10vh;
+    position: relative;
+    display: inline-block;
 }
 
 .card-collection{
@@ -147,6 +172,15 @@ html, body{
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+.div-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .font-oswald{
