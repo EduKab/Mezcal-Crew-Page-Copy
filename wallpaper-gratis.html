@@ -17,6 +17,8 @@
     <!-- Scripts to carousel -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Script to generate swiper -->
+    <script src="scripts/swiper.js"></script>
 </head>
 <body id="bodyWallpaper">
     <!-- Navbar -->
@@ -55,12 +57,14 @@
             </div>
         </nav>
     </header>
+    <!-- Section Filler bar -->
     <section>
         <div class="row">
             <div class="col-12" style="background-color: #646464; height: 100px;">
             </div>
         </div>
     </section>
+    <!-- Section Page title -->
     <section>
         <div class="container mt-5">
             <!-- Section title -->
@@ -75,19 +79,21 @@
             </div>
         </div>
     </section>
+    <!-- Section Carousel -->
     <section>
         <!-- Slider main container -->
         <div class="swiper" style="z-index: 0;">
             <!-- Additional required wrapper -->
             <div id="div-swiper-slide" class="swiper-wrapper">
                 <!-- Slides -->
-
+                <!-- Slides generates with JS script (DINAMYCS) -->
             </div>
-            <!-- If we need navigation buttons -->
+            <!-- Navigation buttons -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
     </section>
+    <!-- Section title part -->
     <section>
         <div class="container mt-5">
             <!-- Section title -->
@@ -102,10 +108,14 @@
             </div>
         </div>
     </section>
+    <!-- Section Download buttons -->
     <section>
+        <!-- Buttons container -->
         <div id="divBtnDownload" class="container mb-5">
+            <!-- Download buttons generates with JS script (DINAMYCS) -->
         </div>
     </section>
+    <!-- FOOTER -->
     <footer id="footer">
         <div class="container">
             <!-- Social media icons -->
@@ -149,32 +159,7 @@
         </div>
     </footer>
 </body>
-<script>
-    function swiper(){
-        const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        slidesPerView: 4,
-        centeredSlides: 'true',
-        spaceBetween: 5,
-        loop: true,
-        slideActiveClass: 'swiper-slide-active',
-        speed: '1000',
-        preloadImages: true,
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false
-        },
-    });
-    }
-</script>
+<!-- Script Firebase -->
 <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
@@ -197,9 +182,11 @@
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
-    createComponents();
+    // Call Function to create components of wallpaper-gratis.html
+    createComponentsWallpapers();
 
-    async function createComponents(){
+    // Function to generate components DINAMYC
+    async function createComponentsWallpapers(){
 
         const wallpapersCol = collection(db, 'wallpapers');
         const wallpapersSnapshot = await getDocs(wallpapersCol);
@@ -209,7 +196,9 @@
         const divBtnDownload = document.getElementById('divBtnDownload');
 
         wallList.forEach(element => {
+            // Create swiper slides
             divSwiperSlide.innerHTML += '<div class="swiper-slide lowBrightness"><img src="' + element.url +'" style="width: 100%; height: 100%;"><div class="name-img"><span class="text-white model-letters font-oswald">MODELO: '+ element.name +'</span></div></div>';
+            // Create download buttons
             divBtnDownload.innerHTML += '<div class="col d-flex justify-content-center mt-1">' +
                                             '<div class="row d-flex align-items-center btn-download">' +
                                                 '<a href="' + element.url +'" class="div-link" target="_blank"></a>' +
@@ -223,6 +212,7 @@
                                             '</div>' +
                                         '</div>'
         });
+        // Update swiper
         swiper();
     }
 </script>
