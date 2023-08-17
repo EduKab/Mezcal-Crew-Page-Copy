@@ -80,33 +80,12 @@
         <div class="swiper" style="z-index: 0;">
             <!-- Additional required wrapper -->
             <div id="div-swiper-slide" class="swiper-wrapper">
-            <!-- Slides -->
-                <!--<div class="swiper-slide lowBrightness"><img src="https://firebasestorage.googleapis.com/v0/b/mezcal-crew-page-copy.appspot.com/o/WP01.jpg?alt=media&token=3b7dd749-623a-4133-be9d-0760561ca07c" style="width: 100%; height: 100%;"></div>
-                <div class="swiper-slide lowBrightness"><img src="assets/images/fondos/fondo-gorras.png" style="width: 100%; height: 100%;"></div>
-                <div class="swiper-slide lowBrightness"><img src="assets/images/fondos/fondo-lanyards.png" style="width: 100%; height: 100%;"></div>
-                <div class="swiper-slide lowBrightness"><img src="assets/images/fondos/fondo-ofertas.png" style="width: 100%; height: 100%;"></div>
-                <div class="swiper-slide lowBrightness"><img src="assets/images/fondos/fondo-kids.png" style="width: 100%; height: 100%;"></div>
-                <div class="swiper-slide lowBrightness"><img src="assets/images/fondos/fondo-hoodies.png" style="width: 100%; height: 100%;"></div>
-                <div class="swiper-slide lowBrightness"><img src="assets/images/fondos/fondo-damas.png" style="width: 100%; height: 100%;"></div>
-                <div class="swiper-slide lowBrightness"><img src="assets/images/fondos/fondo-colecciones.png" style="width: 100%; height: 100%;"></div>
-                <div class="swiper-slide lowBrightness"><img src="assets/images/fondos/fondo-playeras.png" style="width: 100%; height: 100%;"></div>-->
+                <!-- Slides -->
+
             </div>
             <!-- If we need navigation buttons -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-        </div>
-        <div class="swiper-thumbs">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide-thumb"></div>
-              <div class="swiper-slide-thumb"></div>
-              <div class="swiper-slide-thumb"></div>
-              <div class="swiper-slide-thumb"></div>
-              <div class="swiper-slide-thumb"></div>
-              <div class="swiper-slide-thumb"></div>
-              <div class="swiper-slide-thumb"></div>
-              <div class="swiper-slide-thumb"></div>
-              <div class="swiper-slide-thumb"></div>
-            </div>
         </div>
     </section>
     <section>
@@ -193,13 +172,6 @@
             delay: 3000,
             disableOnInteraction: false
         },
-
-        thumbs: {
-            swiper: {
-                el: '.swiper-thumbs',
-                slideThumbActiveClass: 'swiper-slide-thumb-active'
-            }
-        }
     });
     }
 </script>
@@ -237,7 +209,7 @@
         const divBtnDownload = document.getElementById('divBtnDownload');
 
         wallList.forEach(element => {
-            divSwiperSlide.innerHTML += '<div class="swiper-slide lowBrightness"><img src="' + element.url +'" style="width: 100%; height: 100%;"></div>';
+            divSwiperSlide.innerHTML += '<div class="swiper-slide lowBrightness"><img src="' + element.url +'" style="width: 100%; height: 100%;"><div class="name-img"><span class="text-white model-letters font-oswald">MODELO: '+ element.name +'</span></div></div>';
             divBtnDownload.innerHTML += '<div class="col d-flex justify-content-center mt-1">' +
                                             '<div class="row d-flex align-items-center btn-download">' +
                                                 '<a href="' + element.url +'" class="div-link" target="_blank"></a>' +
