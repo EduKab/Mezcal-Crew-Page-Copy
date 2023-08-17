@@ -37,7 +37,7 @@
                               <a class="nav-link text-white font-oswald" style="font-size: 14px;" href="home.html">INICIO</a>
                             </li>
                             <li class="nav-item" style="margin: 10px;">
-                              <a class="nav-link text-white font-oswald" style="font-size: 14px;" href="tienda">TIENDA</a>
+                              <a class="nav-link text-white font-oswald" style="font-size: 14px;" href="tienda.html">TIENDA</a>
                             </li>
                             <li class="nav-item" style="margin: 10px;">
                               <a class="nav-link text-white font-oswald" style="font-size: 14px;" href=""><b>WALLPAPER GRATIS</b></a>
@@ -163,7 +163,7 @@
 <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-    import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js"
+    import { getFirestore, collection, getDocs, orderBy, query } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js"
 
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
@@ -189,8 +189,11 @@
     async function createComponentsWallpapers(){
 
         const wallpapersCol = collection(db, 'wallpapers');
-        const wallpapersSnapshot = await getDocs(wallpapersCol);
+        const query = query(wallpapersCol, orderBy("name", "asc"));
+        const wallpapersSnapshot = await getDocs(query);
+        //console.log(wallpapersSnapshot);
         const wallList = wallpapersSnapshot.docs.map(doc => doc.data());
+
 
         const divSwiperSlide = document.getElementById('div-swiper-slide');
         const divBtnDownload = document.getElementById('divBtnDownload');
